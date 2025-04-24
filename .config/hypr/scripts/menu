@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if pgrep rofi > /dev/null; then
+	killall rofi
+else
+	rofi -show drun -theme /home/matthew/.config/rofi/material.rasi
+fi

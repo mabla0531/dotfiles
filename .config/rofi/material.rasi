@@ -1,0 +1,99 @@
+/*
+ * ROFI color theme
+ *
+ * Based on Something Found in the Internet
+ *
+ * User: Contributors
+ * Copyright: *!
+ */
+
+configuration {
+  font: "Caskaydia Cove Nerd Font Complete Regular 13";
+
+  modi: "drun";
+
+  drun-display-format: "{name}";
+
+  drun {
+    display-name: "";
+  }
+
+  run {
+    display-name: "";
+  }
+
+  window {
+    display-name: "";
+  }
+
+  timeout {
+    delay: 10;
+    action: "kb-cancel";
+  }
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  bg: #15151566;
+  bg-hl: #23232344;
+  bg-alt: #232323;
+  fg: #FFFFFF;
+  fg-alt: #626262;
+
+  background-color: @bg;
+  text-color: @fg;
+}
+
+window {
+  transparency: "real";
+  width: 480px;
+  border: 1px;
+  border-color: #ffffffaa;
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+inputbar {
+  background-color: @bg-alt;
+  children: [entry];
+}
+
+prompt {
+  background-color: inherit;
+  padding: 12px;
+}
+
+entry {
+  background-color: inherit;
+  padding: 12px 3px;
+  horizontal-align: 0.5;
+}
+
+listview {
+  lines: 1;
+}
+
+element {
+  children: [element-text];
+}
+
+element-icon {
+  padding: 10px 10px;
+}
+
+element-text {
+  padding: 10px 0;
+  text-color: @fg-alt;
+  horizontal-align: 0.5;
+}
+
+element-text selected {
+  text-color: @fg;
+  background-color: @bg-hl;
+}
