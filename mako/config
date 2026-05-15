@@ -1,5 +1,8 @@
 font=Iosevka NF 12
 padding=8
+border-radius=8
+border-size=1
+default-timeout=5000
 
 background-color=#24273a
 text-color=#cad3f5
