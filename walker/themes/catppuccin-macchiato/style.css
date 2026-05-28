@@ -43,13 +43,9 @@ scrollbar {
 }
 
 .box-wrapper {
-  box-shadow:
-    0 19px 38px rgba(0, 0, 0, 0.3),
-    0 15px 12px rgba(0, 0, 0, 0.22);
   background: @base;
-  padding: 20px;
-  border-radius: 20px;
-  border: 1px solid @crust;
+  padding: 8px;
+  border: 1px solid @sky;
 }
 
 .preview-box,
