@@ -1,5 +1,5 @@
 theme = Catppuccin Macchiato
-font-family = Iosevka NF Light
+font-family = Iosevka NF
 font-size = 14
 
 confirm-close-surface = false
