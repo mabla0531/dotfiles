@@ -91,8 +91,8 @@ Scope {
                 Repeater {
                     model: SystemTray.items.values
                     Item {
-                        width: 24
-                        height: 24
+                        width: 16
+                        height: 16
                         anchors.verticalCenter: parent.verticalCenter
 
                         Image {
