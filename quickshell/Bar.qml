@@ -43,7 +43,7 @@ Scope {
                         ? Catppuccin.base
                         : Catppuccin.text
                         font.pixelSize: 16
-                        font.family: "Iosevka NF"
+                        font.family: "IosevkaTerm NF"
 
                         MouseArea {
                             anchors.fill: parent
@@ -58,7 +58,7 @@ Scope {
             anchors.centerIn: parent
             text: Time.time
             font.pixelSize: 16
-            font.family: "Iosevka NF"
+            font.family: "IosevkaTerm NF"
             color: Catppuccin.text
         }
 
@@ -73,7 +73,7 @@ Scope {
                 anchors.verticalCenter: parent.verticalCenter
                 color: Catppuccin.text
                 font.pixelSize: 16
-                font.family: "Iosevka NF"
+                font.family: "IosevkaTerm NF"
                 text: {
                     let volume = Math.round(Audio.volume * 100);
                     let icon = "󰕾 ";

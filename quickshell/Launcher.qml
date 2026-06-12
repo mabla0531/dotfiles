@@ -71,7 +71,7 @@ Scope {
                         height: 48
                         padding: 12
                         font.pixelSize: 16
-                        font.family: "Iosevka NF"
+                        font.family: "IosevkaTerm NF"
                         color: Catppuccin.text
                         placeholderTextColor: Catppuccin.text
                         placeholderText: "Search apps..."
@@ -97,7 +97,7 @@ Scope {
                             anchors.left: parent.left
                             anchors.leftMargin: 12
                             font.pixelSize: 16
-                            font.family: "Iosevka NF"
+                            font.family: "IosevkaTerm NF"
                             text: launcherWindow.results[0].name ?? ""
                             color: Catppuccin.text
                         }
@@ -112,7 +112,7 @@ Scope {
                             anchors.left: parent.left
                             anchors.leftMargin: 12
                             font.pixelSize: 16
-                            font.family: "Iosevka NF"
+                            font.family: "IosevkaTerm NF"
                             text: "Kagi: " + searchInput.text
                             color: Catppuccin.text
                         }

@@ -1,5 +1,5 @@
 theme = Catppuccin Mocha
-font-family = Iosevka NF
+font-family = IosevkaTerm NF
 font-size = 14
 
 confirm-close-surface = false
