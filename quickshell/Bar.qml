@@ -13,7 +13,7 @@ Scope {
         PanelWindow {
             required property var modelData
             screen: modelData
-            color: Catppuccin.base
+            color: Theme.base
 
             anchors {
                 top: true
@@ -33,15 +33,15 @@ Scope {
                     width: 24
                     height: 24
                     color: Hyprland.focusedWorkspace?.id === modelData.id
-                    ? Catppuccin.sky
-                    : Catppuccin.base
+                    ? Theme.accent
+                    : Theme.base
 
                     Text {
                         anchors.centerIn: parent
                         text: modelData.id
                         color: Hyprland.focusedWorkspace?.id === modelData.id
-                        ? Catppuccin.base
-                        : Catppuccin.text
+                        ? Theme.base
+                        : Theme.text
                         font.pixelSize: 16
                         font.family: "IosevkaTerm NF"
 
@@ -59,7 +59,7 @@ Scope {
             text: Time.time
             font.pixelSize: 16
             font.family: "IosevkaTerm NF"
-            color: Catppuccin.text
+            color: Theme.text
         }
 
         Row {
@@ -71,7 +71,7 @@ Scope {
             // Volume
             Text {
                 anchors.verticalCenter: parent.verticalCenter
-                color: Catppuccin.text
+                color: Theme.text
                 font.pixelSize: 16
                 font.family: "IosevkaTerm NF"
                 text: {

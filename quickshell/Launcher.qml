@@ -44,8 +44,8 @@ Scope {
 
         Rectangle {
             anchors.fill: parent
-            color: Catppuccin.base
-            border.color: Catppuccin.sky
+            color: Theme.base
+            border.color: Theme.accent
             border.width: 1
             Item {
                 anchors.centerIn: parent
@@ -61,7 +61,7 @@ Scope {
 
                     TextField {
                         background: Rectangle {
-                            color: Catppuccin.mantle
+                            color: Theme.base2
                             anchors.centerIn: parent
                             width: parent.width - 2
                             height: 46
@@ -72,8 +72,8 @@ Scope {
                         padding: 12
                         font.pixelSize: 16
                         font.family: "IosevkaTerm NF"
-                        color: Catppuccin.text
-                        placeholderTextColor: Catppuccin.text
+                        color: Theme.text
+                        placeholderTextColor: Theme.text
                         placeholderText: "Search apps..."
                         focus: true
                     }
@@ -99,7 +99,7 @@ Scope {
                             font.pixelSize: 16
                             font.family: "IosevkaTerm NF"
                             text: launcherWindow.results[0].name ?? ""
-                            color: Catppuccin.text
+                            color: Theme.text
                         }
                     }
 
@@ -114,7 +114,7 @@ Scope {
                             font.pixelSize: 16
                             font.family: "IosevkaTerm NF"
                             text: "Kagi: " + searchInput.text
-                            color: Catppuccin.text
+                            color: Theme.text
                         }
                     }
                 }
