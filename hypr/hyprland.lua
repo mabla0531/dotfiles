@@ -84,6 +84,10 @@ hl.config({
   animations = {
     enabled = true,
   },
+
+  xwayland = {
+    force_zero_scaling = true
+  }
 })
 
 -- Default curves and animations
@@ -183,14 +187,14 @@ hl.bind(mainMod .. " + k", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down" }))
 
 -- Move windows
-hl.bind(mainMod .. " + left", hl.dsp.window.move({ direction = "left" }))
-hl.bind(mainMod .. " + right", hl.dsp.window.move({ direction = "right" }))
-hl.bind(mainMod .. " + up", hl.dsp.window.move({ direction = "up" }))
-hl.bind(mainMod .. " + down", hl.dsp.window.move({ direction = "down" }))
-hl.bind(mainMod .. " + h", hl.dsp.window.move({ direction = "left" }))
-hl.bind(mainMod .. " + l", hl.dsp.window.move({ direction = "right" }))
-hl.bind(mainMod .. " + k", hl.dsp.window.move({ direction = "up" }))
-hl.bind(mainMod .. " + j", hl.dsp.window.move({ direction = "down" }))
+hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "down" }))
+hl.bind(mainMod .. " + SHIFT + h", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + l", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + k", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + j", hl.dsp.window.move({ direction = "down" }))
 
 
 -- Move active window to a workspace
