@@ -1,5 +1,5 @@
-theme = Gruvbox Dark Hard
-font-family = IosevkaTerm NF
+theme = Gruvbox Dark
+font-family = IosevkaTerm NFP Light
 font-size = 14
 
 confirm-close-surface = false

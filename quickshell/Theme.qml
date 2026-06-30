@@ -3,12 +3,12 @@ import QtQuick
 import Quickshell
 
 Singleton {
-    readonly property color base:     "#1e1e2e"
-    readonly property color base2:    "#181825"
-    readonly property color base3:    "#11111b"
+    readonly property color base:     "#3c3836"
+    readonly property color base2:    "#282828"
+    readonly property color base3:    "#1d2021"
 
-    readonly property color accent:   "#89dceb"
+    readonly property color accent:   "#83a598"
 
-    readonly property color text:     "#cdd6f4"
+    readonly property color text:     "#fbf1c7"
 }
 
