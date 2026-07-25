@@ -53,8 +53,8 @@ hl.config({
     gaps_out         = 4,
     border_size      = 1,
     col              = {
-      active_border   = "rgba(82aaffff)",
-      inactive_border = "rgba(616161ff)",
+      active_border   = "rgba(85DACCFF)",
+      inactive_border = "rgba(2C2525FF)",
     },
     resize_on_border = false,
     allow_tearing    = false,
@@ -65,19 +65,8 @@ hl.config({
     rounding         = 0,
     active_opacity   = 1.0,
     inactive_opacity = 1.0,
-
-    shadow           = {
-      enabled      = true,
-      range        = 4,
-      render_power = 3,
-      color        = 0xee1a1a1a,
-    },
-
     blur             = {
-      enabled  = true,
-      size     = 6,
-      passes   = 3,
-      vibrancy = 0.1696,
+      enabled = false,
     },
   },
 
@@ -87,7 +76,7 @@ hl.config({
 
   xwayland = {
     force_zero_scaling = true
-  }
+  },
 })
 
 -- Default curves and animations
@@ -98,7 +87,7 @@ hl.curve("almostLinear", { type = "bezier", points = { { 0.5, 0.5 }, { 0.75, 1 }
 hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
 
 -- Default springs
-hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
+hl.curve("easy", { type = "spring", mass = 0.51, stiffness = 100.0, dampening = 10.0 })
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
