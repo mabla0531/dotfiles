@@ -1,6 +1,6 @@
-theme = Material Darker
-font-family = IosevkaTerm NFP Light
-font-size = 14
+theme = Monokai Pro Ristretto
+font-family = IosevkaTerm NFP
+font-size = 16
 
 confirm-close-surface = false
 
