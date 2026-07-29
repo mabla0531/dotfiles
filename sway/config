@@ -10,7 +10,10 @@ floating_modifier $meta
 bindsym $meta+T exec ghostty
 bindsym $meta+B exec helium-browser
 bindsym $meta+Space exec wmenu-run -f "IosevkaTerm NFP 16"
-bindsym $meta+Escape exec swaylock -c 2c2525ff
+bindsym $meta+Escape exec ~/.config/scripts/swaylock.sh
+bindsym $meta+Control+Escape exec wleave -l ~/.config/wleave/config.json
+
+bindsym $meta+Shift+S exec hyprshot -m region -z --clipboard-only
 
 bindsym $meta+Q kill
 bindsym $meta+Return fullscreen toggle
@@ -21,10 +24,20 @@ bindsym $meta+J focus down
 bindsym $meta+K focus up
 bindsym $meta+L focus right
 
+bindsym $meta+Left focus left
+bindsym $meta+Down focus down
+bindsym $meta+Up focus up
+bindsym $meta+Right focus right
+
 bindsym $meta+Shift+H move left
 bindsym $meta+Shift+J move down
 bindsym $meta+Shift+K move up
 bindsym $meta+Shift+L move right
+
+bindsym $meta+Shift+Left move left
+bindsym $meta+Shift+Down move down
+bindsym $meta+Shift+Up move up
+bindsym $meta+Shift+Right move right
 
 bindsym $meta+1 workspace number 1
 bindsym $meta+2 workspace number 2
