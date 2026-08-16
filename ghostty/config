@@ -1,6 +1,6 @@
 theme = Monokai Pro Ristretto
-font-family = IosevkaTerm NFP
-font-size = 16
+font-family = FiraCode Nerd Font Mono
+font-size = 15
 
 confirm-close-surface = false
 

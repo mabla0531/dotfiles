@@ -9,7 +9,7 @@ floating_modifier $meta
 
 bindsym $meta+T exec ghostty
 bindsym $meta+B exec helium-browser
-bindsym $meta+Space exec wmenu-run -f "IosevkaTerm NFP 16"
+bindsym $meta+Space exec wmenu-run -f "FiraCode Nerd Font Mono 16"
 bindsym $meta+Escape exec ~/.config/scripts/swaylock.sh
 bindsym $meta+Control+Escape exec wleave -l ~/.config/wleave/config.json
 
@@ -73,5 +73,5 @@ output DP-1 res 2560x1440 pos 2560 0
 bar {
   status_command i3status -c ~/.config/i3status/i3status.conf
   position top
-  font pango:IosevkaTerm NFP 14
+  font pango:FiraCode Nerd Font Mono 14
 }
