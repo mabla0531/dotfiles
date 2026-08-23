@@ -34,17 +34,11 @@ hl.env("XCURSOR_SIZE", 24)
 hl.env("HYPRCURSOR_SIZE", 24)
 
 -- program defs
-
 local terminal = "ghostty"
-local powermenu = "wleave"
-local screenshot = "~/.config/hypr/screenshot.sh"
-local lockscreen = "hyprlock"
 
 hl.on("hyprland.start", function()
-  hl.exec_cmd("hyprpaper")
-  hl.exec_cmd("hypridle")
   hl.exec_cmd("mako")
-  hl.exec_cmd("quickshell")
+  hl.exec_cmd("noctalia")
 end)
 
 hl.config({
@@ -53,8 +47,8 @@ hl.config({
     gaps_out         = 4,
     border_size      = 1,
     col              = {
-      active_border   = "rgba(85DACCFF)",
-      inactive_border = "rgba(2C2525FF)",
+      active_border   = "rgba(7aa2f7FF)",
+      inactive_border = "rgba(1a1b26FF)",
     },
     resize_on_border = false,
     allow_tearing    = false,
@@ -62,7 +56,7 @@ hl.config({
   },
 
   decoration = {
-    rounding         = 0,
+    rounding         = 12,
     active_opacity   = 1.0,
     inactive_opacity = 1.0,
     blur             = {
@@ -89,23 +83,23 @@ hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
 -- Default springs
 hl.curve("easy", { type = "spring", mass = 0.51, stiffness = 100.0, dampening = 10.0 })
 
-hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
-hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows", enabled = true, speed = 4.79, spring = "easy" })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.1, spring = "easy", style = "popin 87%" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.49, bezier = "linear", style = "popin 87%" })
-hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
-hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.46, bezier = "almostLinear" })
-hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
-hl.animation({ leaf = "layers", enabled = true, speed = 3.81, bezier = "easeOutQuint" })
-hl.animation({ leaf = "layersIn", enabled = true, speed = 4, bezier = "easeOutQuint", style = "fade" })
-hl.animation({ leaf = "layersOut", enabled = true, speed = 1.5, bezier = "linear", style = "fade" })
-hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.79, bezier = "almostLinear" })
-hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "almostLinear" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 1.94, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "workspacesIn", enabled = true, speed = 1.21, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "workspacesOut", enabled = true, speed = 1.94, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" })
+hl.animation({ leaf = "global", enabled = true, speed = 1.0, bezier = "default" })
+hl.animation({ leaf = "border", enabled = true, speed = 1.0, bezier = "easeOutQuint" })
+hl.animation({ leaf = "windows", enabled = true, speed = 1.0, spring = "easy" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 1.0, spring = "easy", style = "popin 87%" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.0, bezier = "linear", style = "popin 87%" })
+hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.0, bezier = "almostLinear" })
+hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.0, bezier = "almostLinear" })
+hl.animation({ leaf = "fade", enabled = true, speed = 1.0, bezier = "quick" })
+hl.animation({ leaf = "layers", enabled = true, speed = 1.0, bezier = "easeOutQuint" })
+hl.animation({ leaf = "layersIn", enabled = true, speed = 1.0, bezier = "easeOutQuint", style = "fade" })
+hl.animation({ leaf = "layersOut", enabled = true, speed = 1.0, bezier = "linear", style = "fade" })
+hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.0, bezier = "almostLinear" })
+hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.0, bezier = "almostLinear" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 1.0, bezier = "almostLinear", style = "fade" })
+hl.animation({ leaf = "workspacesIn", enabled = true, speed = 1.0, bezier = "almostLinear", style = "fade" })
+hl.animation({ leaf = "workspacesOut", enabled = true, speed = 1.0, bezier = "almostLinear", style = "fade" })
+hl.animation({ leaf = "zoomFactor", enabled = true, speed = 1.0, bezier = "quick" })
 
 hl.config({
   dwindle = {
@@ -157,13 +151,13 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd(lockscreen))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(screenshot))
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
 hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + Return", hl.dsp.window.fullscreen())
-hl.bind(mainMod .. " + CONTROL + Escape", hl.dsp.exec_cmd(powermenu))
-hl.bind(mainMod .. " + Space", hl.dsp.global("quickshell:launcher"))
+hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
+hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("noctalia msg session lock"))
+hl.bind(mainMod .. " + SHIFT + Escape", hl.dsp.exec_cmd("noctalia msg session lock-and-suspend"))
+hl.bind(mainMod .. " + CONTROL + Escape", hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
 
 -- Move focus
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
