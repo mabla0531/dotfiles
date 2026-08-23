@@ -37,14 +37,13 @@ hl.env("HYPRCURSOR_SIZE", 24)
 local terminal = "ghostty"
 
 hl.on("hyprland.start", function()
-  hl.exec_cmd("mako")
   hl.exec_cmd("noctalia")
 end)
 
 hl.config({
   general = {
-    gaps_in          = 2,
-    gaps_out         = 4,
+    gaps_in          = 4,
+    gaps_out         = 8,
     border_size      = 1,
     col              = {
       active_border   = "rgba(7aa2f7FF)",
